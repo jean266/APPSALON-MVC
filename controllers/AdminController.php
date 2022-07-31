@@ -1,5 +1,7 @@
 <?php
 
+// Un comentario
+
 namespace Controllers;
 
 use Model\AdminCita;
