@@ -9,15 +9,14 @@ use Model\Servicio;
 
 class APIController
 {
-    public static function index(Router $router)
+    public static function index()
     {
         $servicios = Servicio::all();
         echo json_encode($servicios);
     }
 
-    public static function guardar(Router $router)
+    public static function guardar()
     {
-
         // // Almacena la cita y devuelve el ID
         $cita = new Cita($_POST);
         $resultado = $cita->guardar();
@@ -39,7 +38,8 @@ class APIController
     public static function eliminar()
     {
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $cita = Cita::find($_POST['id']);
+            $id = $_POST['id'];
+            $cita = Cita::find($id);
             $cita->eliminar();
             header('location: ' . $_SERVER['HTTP_REFERER']);
         }
