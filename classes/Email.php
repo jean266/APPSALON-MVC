@@ -64,7 +64,7 @@ class Email
 
         $contenido = "<html>";
         $contenido .= "<p>Hola <strong>" . $this->nombre . "</strong> has solicitado reestablecer tu password, has click en el siguiete enlace.</p>";
-        $contenido .= "<p>Presiona aquí: <a href='https://desolate-waters-33280.herokuapp.com/recuperar?token=" . $this->token . "' >Reestablecer Password</a></p>";
+        $contenido .= "<p>Presiona aquí: <a href='https://desolate-waters-33280.herokuapp.com/recuperar?token=" . $this->token . "' >Reestablece tu Password</a></p>";
         $contenido .= "<p>Si tu no solicitaste reestablecer tu contraseña, puedes ignorar el mensaje</p>";
         $contenido .= "</html>";
         $mail->Body = $contenido;
