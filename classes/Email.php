@@ -36,7 +36,7 @@ class Email
 
         $contenido = "<html>";
         $contenido .= "<p>Hola <strong>" . $this->nombre . "</strong> Has tu cuenta en App Salon, solo debes confirmarla precionando el siguiente enlace.</p>";
-        $contenido .= "<p>Presiona aquí: <a href='http://localhost:3000//confirmar-cuenta?token=" . $this->token . "' >Confirmar Cuenta</a></p>";
+        $contenido .= "<p>Presiona aquí: <a href='https://desolate-waters-33280.herokuapp.com/confirmar-cuenta?token=" . $this->token . "' >Confirmar Cuenta</a></p>";
         $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
         $contenido .= "</html>";
         $mail->Body = $contenido;
