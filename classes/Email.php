@@ -36,7 +36,7 @@ class Email
 
         $contenido = "<html>";
         $contenido .= "<p>Hola <strong>" . $this->nombre . "</strong> Has tu cuenta en App Salon, solo debes confirmarla precionando el siguiente enlace.</p>";
-        $contenido .= "<p>Presiona aquí: <a href='https://desolate-waters-33280.herokuapp.com/confirmar-cuenta?token=" . $this->token . "' >Confirmar Cuenta</a></p>";
+        $contenido .= "<p>Presiona aquí: <a href='" . $_ENV['SERVER_HOST'] . "confirmar-cuenta?token=" . $this->token . "' >Confirmar Cuenta</a></p>";
         $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
         $contenido .= "</html>";
         $mail->Body = $contenido;
@@ -64,7 +64,7 @@ class Email
 
         $contenido = "<html>";
         $contenido .= "<p>Hola <strong>" . $this->nombre . "</strong> has solicitado reestablecer tu password, has click en el siguiete enlace.</p>";
-        $contenido .= "<p>Presiona aquí: <a href='https://desolate-waters-33280.herokuapp.com/recuperar?token=" . $this->token . "' >Reestablece tu Password</a></p>";
+        $contenido .= "<p>Presiona aquí: <a href='" . $_ENV['SERVER_HOST'] . "recuperar?token=" . $this->token . "' >Reestablece tu Password</a></p>";
         $contenido .= "<p>Si tu no solicitaste reestablecer tu contraseña, puedes ignorar el mensaje</p>";
         $contenido .= "</html>";
         $mail->Body = $contenido;
